@@ -21,7 +21,20 @@ const cards = [
  * @param {array} cards
  * @return {string} displayVal
  */
-const cardsWorthTen = cards => {};
+const cardsWorthTen = cards => {
+  let displayValues = "";
+
+  for (let i = 0; i < cards.length; i++) {
+    if (cards[i].val === 10) {
+      if (displayValues.length > 0) {
+        displayValues += ', ';
+      }
+      displayValues += cards[i].displayVal;
+    }
+  }
+
+  return displayValues;
+};
 
 console.log(cardsWorthTen(cards));
 // should return/log "10, Jack, Queen, King"
