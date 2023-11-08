@@ -58,4 +58,14 @@ const cards = [
  *
  * @param {array} deck A deck of cards
  */
-const logCardDeck = deck => {};
+const logCardDeck = deck => {
+    for (let i = 0; i < deck.length; i++) {
+      const card = deck[i];
+      console.log(`Card ${i + 1}:`);
+      console.log(`Value: ${card.val}`);
+      console.log(`Display Value: ${card.displayVal}`);
+      console.log(`Suit: ${card.suit}`);
+      console.log("------------");}
+};
+
+logCardDeck(cards);
